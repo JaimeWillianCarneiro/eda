@@ -139,6 +139,7 @@ def scanl : (b → a → b ) → b → List a → List b
 #eval scanl (λ r n => n :: r)
   "foo".toList ['a', 'b', 'c', 'd'] |>.map List.asString
 
+
 def inits {a : Type} : List a → List (List a)
 | [] => [[]]
 | (x :: xs) => [] :: (inits xs).map (fun ys => x :: ys)
